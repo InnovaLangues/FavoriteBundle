@@ -1,0 +1,4 @@
+innova_favorite:
+    resource: "@InnovaFavoriteBundle/Controller/"
+    type:     annotation
+    prefix:   /
