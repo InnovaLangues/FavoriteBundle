@@ -12,7 +12,7 @@ use Innova\PathBundle\Installation\AdditionalInstaller;
 /**
  * Bundle class.
  */
-class InnovaFavoritesBundle extends PluginBundle implements AutoConfigurableInterface, ConfigurationProviderInterface
+class InnovaFavoriteBundle extends PluginBundle implements AutoConfigurableInterface, ConfigurationProviderInterface
 {
     public function supports($environment)
     {
@@ -23,21 +23,11 @@ class InnovaFavoritesBundle extends PluginBundle implements AutoConfigurableInte
     {
         $config = new ConfigurationBuilder();
 
-        return $config->addRoutingResource(__DIR__ . '/Resources/config/routing.yml', null, 'innova_path');
-    }
-
-    public function getRequiredFixturesDirectory($environment)
-    {
-        return 'DataFixtures/Required';
+        return $config->addRoutingResource(__DIR__ . '/Resources/config/routing.yml', null, 'innova_favorite');
     }
 
     public function suggestConfigurationFor(Bundle $bundle, $environment)
     {
         
-    }
-
-     public function getAdditionalInstaller()
-    {
-        return new AdditionalInstaller();
     }
 }

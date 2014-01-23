@@ -1,0 +1,2 @@
+parameters:
+    innova_favorite.controller.sidebar.class: Innova\FavoriteBundle\Controller\SidebarController

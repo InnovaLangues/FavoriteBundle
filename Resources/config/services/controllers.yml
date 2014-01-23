@@ -1,0 +1,4 @@
+services: 
+    # Path controller
+    innova_favorite.controller.sidebar:
+        class: %innova_favorite.controller.sidebar.class%
