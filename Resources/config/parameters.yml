@@ -1,2 +1,6 @@
 parameters:
+    # Controllers
     innova_favorite.controller.sidebar.class: Innova\FavoriteBundle\Controller\SidebarController
+
+    # Managers
+    innova_favorite.manager.favorite.class: Innova\FavoriteBundle\Manager\FavoriteManager

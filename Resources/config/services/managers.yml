@@ -1,0 +1,6 @@
+services:
+    innova_favorite.manager.favorite:
+        class: %innova_favorite.manager.favorite.class%
+        arguments:
+            objectManager:   @doctrine.orm.entity_manager
+            securityContext: @security.context

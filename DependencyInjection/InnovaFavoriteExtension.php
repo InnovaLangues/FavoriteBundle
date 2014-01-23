@@ -1,6 +1,6 @@
 <?php
 
-namespace Innova\PathBundle\DependencyInjection;
+namespace Innova\FavoriteBundle\DependencyInjection;
 
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
@@ -29,6 +29,7 @@ class InnovaFavoriteExtension extends Extension
         $loader = new YamlFileLoader($container, $locator);
     
         $loader->load('controllers.yml');
+        $loader->load('managers.yml');
     
         return $this;
     }

@@ -6,6 +6,8 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
+use Innova\FavoriteBundle\Manager\FavoriteManager;
+
 /**
  * Class SidebarController
  *
@@ -26,6 +28,21 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
  */
 class SidebarController
 {
+	/**
+	 * Favorite Manager
+	 * @var \Innova\FavoriteBundle\Manager\FavoriteManager
+	 */
+	protected $favoriteManager;
+	
+	/**
+	 * Class constructor
+	 * @param \Innova\FavoriteBundle\Manager\FavoriteManager $favoriteManager
+	 */
+	public function __construct(FavoriteManager $favoriteManager)
+	{
+		$this->favoriteManager = $favoriteManager;
+	}
+	
     /**
      * Display sidebar
      * @Route(
@@ -38,8 +55,10 @@ class SidebarController
      */
     public function displayAction()
     {
+    	$favorites = $this->favoriteManager->getUserFavorites();
+    	
         return array (
-        	
+        	'favorites' => $favorites,
         );
     }
 }
