@@ -1,13 +1,13 @@
 <div id="right-bar" class="favorites-sidebar">
-	<div class="list-group menu">
-		<div class="list-group-item disabled">
-			Favorites
-		</div>
-		
-		{% for favorite in favorites %}
-		<a class="list-group-item" href="#">{{ favorite.name }}</a>
-		{% endfor %}
-	</div>
+    <div class="list-group menu">
+        <div class="list-group-item disabled">
+            Favorites
+        </div>
+        
+        {% for favorite in favorites %}
+        <a class="list-group-item" href="#">{{ favorite.name }}</a>
+        {% endfor %}
+    </div>
 </div>
 
 {# {% stylesheets debug=false filter='lessphp, cssmin' output='vendor/innovafavorite/sidebar.css'#}
