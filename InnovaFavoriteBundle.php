@@ -14,6 +14,11 @@ use Innova\PathBundle\Installation\AdditionalInstaller;
  */
 class InnovaFavoriteBundle extends PluginBundle implements AutoConfigurableInterface, ConfigurationProviderInterface
 {
+    public function hasMigrations()
+    {
+        return false;
+    }
+    
     public function supports($environment)
     {
         return true;
