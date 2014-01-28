@@ -1,18 +1,10 @@
-<div id="right-bar" class="favorites-sidebar">
-    <div class="list-group menu">
-        <div class="list-group-item disabled">
-            Favorites
-        </div>
-        
-        {% for favorite in favorites %}
-        <a class="list-group-item" href="#">{{ favorite.name }}</a>
-        {% endfor %}
+<div class="list-group menu">
+    <div class="list-group-item disabled">
+        <i class="icon-heart"></i>
+        Favorites
     </div>
-</div>
 
-{# {% stylesheets debug=false filter='lessphp, cssmin' output='vendor/innovafavorite/sidebar.css'#}
-{#    '@InnovaFavoriteBundle/Resources/public/less/sidebar.less' %}#}
-{# 	<link rel="stylesheet" href="{{ asset_url }}" screen="media" />#}
-{# {% endstylesheets %}#}
-<link rel="stylesheet" href="{{ asset('bundles/innovafavorite/css/sidebar.css') }}" screen="media" />
-<script type="text/javascript" src="{{ asset('bundles/innovafavorite/js/sidebar.js') }}"></script>
+    {% for favorite in favorites %}
+    <a class="list-group-item" href="#">{{ favorite.name }}</a>
+    {% endfor %}
+</div>

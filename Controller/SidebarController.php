@@ -28,26 +28,26 @@ use Innova\FavoriteBundle\Manager\FavoriteManager;
  */
 class SidebarController
 {
-	/**
-	 * Favorite Manager
-	 * @var \Innova\FavoriteBundle\Manager\FavoriteManager
-	 */
-	protected $favoriteManager;
-	
-	/**
-	 * Class constructor
-	 * @param \Innova\FavoriteBundle\Manager\FavoriteManager $favoriteManager
-	 */
-	public function __construct(FavoriteManager $favoriteManager)
-	{
-		$this->favoriteManager = $favoriteManager;
-	}
-	
+    /**
+     * Favorite Manager
+     * @var \Innova\FavoriteBundle\Manager\FavoriteManager
+     */
+    protected $favoriteManager;
+    
+    /**
+     * Class constructor
+     * @param \Innova\FavoriteBundle\Manager\FavoriteManager $favoriteManager
+     */
+    public function __construct(FavoriteManager $favoriteManager)
+    {
+        $this->favoriteManager = $favoriteManager;
+    }
+    
     /**
      * Display sidebar
      * @Route(
      *      "/",
-     *      name    = "innova_path_editor_new",
+     *      name    = "innova_favorite_list",
      *      options = {"expose" = true}
      * )
      * @Method("GET")
@@ -55,10 +55,10 @@ class SidebarController
      */
     public function displayAction()
     {
-    	$favorites = $this->favoriteManager->getUserFavorites();
-    	
+        $favorites = $this->favoriteManager->getUserFavorites();
+        
         return array (
-        	'favorites' => $favorites,
+            'favorites' => $favorites,
         );
     }
 }
