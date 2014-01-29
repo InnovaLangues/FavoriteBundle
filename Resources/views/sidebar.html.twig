@@ -5,6 +5,6 @@
     </div>
 
     {% for favorite in favorites %}
-    <a class="list-group-item" href="#">{{ favorite.name }}</a>
+    <a class="list-group-item" target="_blank" href="{{ path('claro_resource_open', {'node': favorite.id, 'resourceType': favorite.resourceType.name }) }}">{{ favorite.name }}</a>
     {% endfor %}
 </div>
